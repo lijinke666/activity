@@ -1,0 +1,98 @@
+@primary-color:#557EBE;
+@main-color:#42AAC8;
+@blue-color:#3399CC;
+@green-color:#6AB35C;
+@grey-color:#f5f5f5;
+@border-color:#ccc;
+@bg-color:#f8f8f8;
+@red-color:#E31E1E;
+@yellow-color:#F4BD00;
+@header_background:#2075cf;
+@header_background_color: #2075cf;
+@header_height: 48px;
+@header_color:#000;
+@header_center_fontsize:.18rem;
+@header_left_height:48px;
+@header_left_width: 48px;
+@header_right_width: 48px;
+@header_right_height: 48px;
+@header_fontsize:.16rem;
+.transition(@time){
+    transition:all @time ease;
+}
+.ellipsis-n(@n){
+    -webkit-line-clamp:@n;
+    display:-webkit-box;
+    overflow: hidden;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+}
+.ellipsis-1{
+    -webkit-line-clamp:1;
+    display:-webkit-box;
+    overflow: hidden;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+}
+.shandow(){
+    box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+}
+.border-radius100{
+    border-radius: 50%;
+}
+.fz-weight{
+    font-weight: 400;
+}
+@keyframes titleAnimate{
+    from{
+        opacity: 0;
+        transform: translate3d(0,-30px,0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0)     
+    }
+}
+@keyframes subTitleAnimate{
+    from{
+        opacity: 0;
+        transform: rotateY(20deg) scale(0)
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(0deg) scale(1)
+    }
+}
+@keyframes rightAnimate{
+    from{
+        opacity: 0;
+        transform: translate3d(100px,0,0)
+    }
+    to{
+        opacity: 1;
+         transform: translate3d(0,0,0)
+    }
+}
+@keyframes leftAnimate{
+    from{
+        opacity: 0;
+        transform: translate3d(-100px,0,0)
+    }
+    to{
+        opacity: 1;
+         transform: translate3d(0,0,0)
+    }
+}
+
+.left-animate{
+            animation: leftAnimate .6s cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+.right-animate{
+            animation: rightAnimate .6s cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+    .title-animate{
+        animation: titleAnimate .6s cubic-bezier(0.215, 0.610, 0.355, 1)
+    }
+    .sub-title-animate{
+        animation: subTitleAnimate .6s cubic-bezier(0.215, 0.610, 0.355, 1)
+    }
